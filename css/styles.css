@@ -1,0 +1,187 @@
+:root
+{
+    font-size: 16px;
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --Light-Cyan: hsl(179, 55%, 48%);
+}
+
+body
+{
+    background-color: var(--Light-Gray);
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+}
+
+.main-container
+{
+    display: flex;
+    margin: auto;
+    place-items: center;
+    width: 80vw;
+    max-width: 635px;
+    min-height: 100vh;
+}
+
+.grid-container
+{ 
+    border-radius: .3rem;  
+    box-shadow: 0 2px 15px var(--Grayish-Blue);
+    display: grid;
+    grid-auto-columns: minmax(19.2rem, 1fr);
+    grid-auto-rows: 14.25rem;
+    grid-template-columns: minmax(19.2rem, 1fr);
+    grid-template-rows: 16.5rem;
+    justify-items: center;
+    margin: 4rem auto;
+    overflow: hidden;
+}
+
+.invitation, .registration, .description
+{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 1.2rem 1.4rem;
+    width: 100%;
+}
+
+.invitation__title, .invitation__subtitle, 
+.registration__subtitle, .description__subtitle
+{
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.invitation__paragraph, .registration__paragraph, 
+.description__why-list
+{
+    font-size: .85rem;
+}
+
+.registration, .description, .registration__link
+{
+    color:white;
+}
+
+.invitation
+{
+    background-color: white;
+}
+
+.invitation__paragraph
+{
+    color: var(--Grayish-Blue);
+    line-height: 1.6rem;
+}
+
+.invitation__title
+{
+    color: var(--Cyan);
+    font-size: 1.3rem;
+}
+
+.invitation__subtitle
+{
+    color: var(--Bright-Yellow);
+    font-size: .95rem;
+    margin: 1.3rem 0;
+}
+
+.registration
+{
+    background-color: var(--Cyan);
+}
+
+.registration__paragraph--light
+{
+    line-height: 2rem;
+}
+
+.registration__paragraph
+{
+    font-size: .95rem;
+}
+
+.registration__time, .registration__price
+{
+    vertical-align: middle;
+}
+
+.registration__price
+{
+    font-size: 2rem;
+}
+
+.registration__link
+{ 
+    background-color: var(--Bright-Yellow);
+    border-radius: .3rem;
+    display: block;
+    line-height: 3rem;
+    margin-top: 1.7rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.description
+{
+    background-color: var(--Light-Cyan);
+}
+
+.description__why-list
+{
+    line-height: 1.3rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+@media (min-width:650px)
+{
+    .grid-container
+    {
+        border-radius: .6rem;
+        grid-template-rows: 13.5rem 16.1rem;
+        margin: auto;
+    }
+
+    .invitation, .registration, .description
+    {
+        padding: 1.7rem 2.5rem;
+    }
+
+    .invitation
+    {
+        grid-column: 1 / 3;
+    }
+
+    .invitation__title
+    {
+        font-size: 1.5rem;
+    }
+
+    .invitation__subtitle
+    {
+        font-size: 1.15rem;
+        margin-bottom: .9rem;
+    }
+
+    .invitation__paragraph
+    {
+        font-size: 1rem;
+        line-height: 1.7rem;
+        margin-top: .9rem;
+    }
+
+    .registration__link
+    {
+        font-weight: 700;
+    }
+
+    .registration__link:hover
+    {
+        color: var(--Light-Cyan);
+    }
+}
